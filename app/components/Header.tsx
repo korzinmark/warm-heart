@@ -3,7 +3,7 @@ import { Menu, ShoppingBag, Search } from 'lucide-react'
 
 export default function Header() {
     return (
-        <header className="container mx-auto p-5 lg:py-7">
+        <header className="container mx-auto p-5 sm:px-0 lg:py-7">
             <div className="grid grid-cols-3 items-center">
                 <div className="flex items-center gap-3">
                     <button type="button" className="p-2 xl:hidden" aria-label="Open menu">

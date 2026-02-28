@@ -1,12 +1,27 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+const INSTAGRAM_URL = 'https://www.instagram.com/'
+const INSTAGRAM_HANDLE = '@warm.heart'
+const DESCRIPTION_TEXT =
+    'On our Instagram, we regularly share the most interesting news. We also tell you about all our new products.'
+
+const InstagramLink = ({ className }: { className?: string }) => (
+    <Link href={INSTAGRAM_URL} className={className}>
+        {INSTAGRAM_HANDLE}
+    </Link>
+)
+
+const Description = ({ className }: { className?: string }) => (
+    <p className={className}>{DESCRIPTION_TEXT}</p>
+)
+
 export default function Home() {
     return (
         <>
             <section className="bg-beige relative">
                 <div className="md:flex">
-                    <div className="container mx-auto px-5 pt-17 pb-22 md:pt-22 md:pb-30 xl:pt-45.25 xl:pb-52.75">
+                    <div className="container mx-auto px-5 pt-17 pb-22 sm:px-0 md:pt-22 md:pb-30 xl:pt-45.25 xl:pb-52.75">
                         <h1 className="text-left text-4xl/12 font-semibold sm:text-5xl/15 md:text-6xl/19">
                             Soft plaids <br /> for your comfort
                         </h1>
@@ -37,10 +52,10 @@ export default function Home() {
             </section>
 
             <section>
-                <div className="container mx-auto px-5 py-17.5">
+                <div className="container mx-auto px-5 py-17.5 sm:px-0">
                     <h2 className="text-4xl font-semibold">Popular products</h2>
 
-                    <div className="flex justify-center gap-5 2xl:justify-between">
+                    <div className="flex justify-center gap-5">
                         <article className="mt-10 flex justify-center">
                             <Link href="/product/gerhild">
                                 <Image
@@ -48,10 +63,10 @@ export default function Home() {
                                     alt="Gerhild beige plaid 130x170 cm"
                                     width={1090}
                                     height={1049}
-                                    className="bg-beige h-80 w-80 rounded-3xl p-10 sm:h-52.5 sm:w-52.5 sm:p-7 md:w-88.5 md:h-88.5 md:p-12.5 lg:w-76.75 lg:h-76.75 xl:w-96.5 xl:h-96.5"
+                                    className="bg-beige w-80 rounded-3xl p-10 sm:w-52.5 sm:p-7 md:w-93.5 md:p-12.5 lg:w-82 xl:w-103 2xl:w-92.25"
                                 />
 
-                                <h3 className="mt-2.5 text-xl md:text-2xl font-medium">Gerhild</h3>
+                                <h3 className="mt-2.5 text-xl font-medium md:text-2xl">Gerhild</h3>
 
                                 <div className="flex justify-between md:text-xl">
                                     <p>130x170 cm</p>
@@ -68,10 +83,10 @@ export default function Home() {
                                     alt="Gultall gray plaid 130x170 cm"
                                     width={1090}
                                     height={1049}
-                                    className="bg-beige h-52.5 w-52.5 rounded-3xl p-7 md:w-88.5 md:h-88.5 md:p-12.5 lg:w-76.75 lg:h-76.75 xl:w-96.5 xl:h-96.5"
+                                    className="bg-beige w-52.5 rounded-3xl p-7 md:w-93.5 md:p-12.5 lg:w-82 xl:w-103 2xl:w-92.25"
                                 />
 
-                                <h3 className="mt-2.5 text-xl md:text-2xl font-medium">Gultall</h3>
+                                <h3 className="mt-2.5 text-xl font-medium md:text-2xl">Gultall</h3>
 
                                 <div className="flex justify-between md:text-xl">
                                     <p>130x170 cm</p>
@@ -88,10 +103,10 @@ export default function Home() {
                                     alt="Rovaror brown plaid 150x200 cm"
                                     width={1008}
                                     height={965}
-                                    className="bg-beige h-52.5 w-52.5 rounded-3xl p-7 md:w-88.5 md:h-88.5 md:p-12.5 lg:w-76.75 lg:h-76.75 xl:w-96.5 xl:h-96.5"
+                                    className="bg-beige w-52.5 rounded-3xl p-7 md:w-88.5 md:p-12.5 lg:w-82 xl:w-103 2xl:w-92.25"
                                 />
 
-                                <h3 className="mt-2.5 text-xl md:text-2xl font-medium">Rovaror</h3>
+                                <h3 className="mt-2.5 text-xl font-medium md:text-2xl">Rovaror</h3>
 
                                 <div className="flex justify-between md:text-xl">
                                     <p>150x200 cm</p>
@@ -100,25 +115,183 @@ export default function Home() {
                                 </div>
                             </Link>
                         </article>
+
+                        <article className="mt-10 hidden justify-center 2xl:flex">
+                            <Link href="/product/ludmalla">
+                                <Image
+                                    src="/luddmalla.png"
+                                    alt="Ludmalla grown plaid 130x170 cm"
+                                    width={1008}
+                                    height={965}
+                                    className="bg-beige w-52.5 rounded-3xl p-7 md:w-88.5 md:p-12.5 lg:w-82 xl:w-103 2xl:w-92.25"
+                                />
+
+                                <h3 className="mt-2.5 text-xl font-medium md:text-2xl">Ludmalla</h3>
+
+                                <div className="flex justify-between md:text-xl">
+                                    <p>130x170 cm</p>
+
+                                    <p>€95</p>
+                                </div>
+                            </Link>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            <section className='bg-black pt-17.5 pb-22.5 px-5'>
-                <div className='container mx-auto text-white'>
-                    <h2 className='text-4xl/12 font-semibold'>Create comfort <br /> in home</h2>
+            <section className="bg-black">
+                <div className="container mx-auto px-5 pt-17.5 pb-22.5 text-white sm:px-0 md:pt-22.5 md:pb-30 lg:pb-16.5 xl:py-37.5">
+                    <div className="xl:flex xl:items-center xl:gap-7.75 2xl:justify-between">
+                        <div className="xl:w-87.5">
+                            <h2 className="text-4xl/12 font-semibold md:text-5xl/15 md:font-medium">
+                                Create comfort <br className="sm:hidden" /> in home
+                            </h2>
 
-                    <p className='mt-5'>A blanket is a simple and versatile thing that can make relaxing after a hard day's work much more comfortable.</p>
+                            <p className="mt-5 md:mt-7.5 md:text-xl">
+                                A blanket is a simple and versatile thing that can make relaxing
+                                after a hard day's work much more comfortable.
+                            </p>
+                        </div>
 
-                    <Image alt="Sideneert brown blanket" src='/sideneert.png' width={977} height={922} className='mt-10' />
+                        <div className="mt-10 flex flex-col gap-10 md:mt-12.5 md:flex-row lg:gap-13.75 xl:mt-0 2xl:contents">
+                            <Image
+                                alt="Sideneert brown blanket"
+                                src="/sideneert.png"
+                                width={977}
+                                height={922}
+                                className="w-76.75 sm:w-85.5 md:mt-8 md:w-74.25 lg:mt-0 lg:w-94.5 2xl:shrink-0"
+                            />
 
-                    <h3 className='text-3xl font-semibold mt-10'>Sedineert</h3>
+                            <div className="xl:w-95.5">
+                                <h3 className="text-3xl font-semibold md:text-4xl md:font-medium">
+                                    Sideneert
+                                </h3>
 
-                    <p className='mt-5'>It is made from soft New Zealand wool, which is naturally stain-repellent.</p>
+                                <div className="mt-5 md:mt-7.5 md:text-xl">
+                                    <p>
+                                        It is made from soft New Zealand wool, which is naturally
+                                        stain-repellent.
+                                    </p>
+                                    <p className="mt-4 md:mt-5">
+                                        This bedspread is an easy way to freshen up your bedroom
+                                        decor. Plus, it can be used as an extra blanket if you get
+                                        cold.
+                                    </p>
+                                </div>
 
-                    <p className='mt-4'>This bedspread is an easy way to freshen up your bedroom decor. Plus, it can be used as an extra blanket if you get cold.</p>
+                                <Link
+                                    href="/shop"
+                                    className="mt-8.75 inline-block rounded-full bg-white px-22.5 py-3.25 font-medium text-black md:mt-11.25 md:px-20 md:text-xl"
+                                >
+                                    Go to shop
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                    <Link href="/shop" className='pt-[18px] px-[90px] bg-white'>Go to shop</Link>
+            <section className="bg-beige relative px-5 pt-17.5 pb-22.5 sm:px-0 md:pt-25 md:pb-30 xl:pt-32.5 xl:pb-37.5">
+                <div className="container mx-auto text-center">
+                    <div className="absolute -top-12 left-1/2 flex h-25 w-25 -translate-x-1/2 items-center justify-center rounded-full border-3 border-black bg-white md:-top-19 md:h-37.5 md:w-37.5 md:border-4">
+                        <Image
+                            alt="leaf"
+                            src="/leaf.svg"
+                            width={56}
+                            height={61}
+                            className="md:h-24 md:w-22"
+                        />
+                    </div>
+
+                    <h2 className="text-4xl/12 font-semibold md:text-5xl">
+                        We use eco-friendly materials
+                    </h2>
+
+                    <p className="mx-auto mt-5 md:mt-7.5 md:text-xl lg:max-w-200.5">
+                        We always care about the environment. Therefore we use only environmentally
+                        friendly and recyclable materials in our production. Our blankets help to
+                        warm up on cold evenings, and also make your home even more cozy.
+                    </p>
+                </div>
+            </section>
+
+            <section className="bg-white">
+                <div className="container mx-auto px-5 pt-17.5 pb-22.5 sm:px-0 md:pt-22.5 md:pb-27.5 lg:pb-25 xl:pt-32.5 xl:pb-37.5">
+                    <h2 className="text-4xl/12 font-semibold md:text-5xl">
+                        Follow us on <br className="sm:hidden" /> Instagram
+                    </h2>
+
+                    <div className="mt-10 flex gap-5 md:mt-12.5 xl:mt-15">
+                        <div className="md:h-93.5 md:w-93.5 lg:h-82 lg:w-82 xl:h-101 xl:w-101 2xl:h-121 2xl:w-121">
+                            <Image
+                                alt="Red plaid on the bed"
+                                width={958}
+                                height={958}
+                                src="/red-plaid.jpg"
+                                className="rounded-3xl"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
+
+                            <Description className="mt-4 hidden text-xl md:block" />
+                        </div>
+
+                        <div className="hidden md:block md:w-93.5 lg:h-105.5 lg:w-105.5 xl:h-129 xl:w-129 2xl:h-149 2xl:w-149">
+                            <Image
+                                alt="Beige plain on the sofa"
+                                width={1000}
+                                height={1000}
+                                src="/sofa-plaid.jpg"
+                                className="rounded-3xl"
+                                sizes="(max-width: 1024px) 50vw, 33vw"
+                            />
+
+                            <InstagramLink className="mt-4 block text-4xl lg:hidden" />
+                        </div>
+
+                        <div className="hidden lg:block lg:h-56.5 lg:w-56.5 xl:h-79 xl:w-79 2xl:h-103 2xl:w-103">
+                            <Image
+                                alt="Warm beige plaid"
+                                width={660}
+                                height={660}
+                                src="/warm-plaid.jpg"
+                                className="rounded-3xl"
+                                sizes="33vw"
+                            />
+
+                            <InstagramLink className="mt-4 block text-4xl" />
+                        </div>
+                    </div>
+
+                    <InstagramLink className="mt-4 block text-3xl md:hidden" />
+                    <Description className="mt-3 md:hidden" />
+                </div>
+            </section>
+
+            <section className="bg-beige">
+                <div className="container mx-auto px-5 pt-17.5 pb-22.5">
+                    <h2 className="text-3xl/11 font-semibold">
+                        Get 20% off <br /> your first purchase
+                    </h2>
+
+                    <p className="mt-5">
+                        Subscribe to our newsletter and get a promo code for a 20% discount! You
+                        will receive only the most important and relevant news.
+                    </p>
+
+                    <form action="" className="mt-10">
+                        <input
+                            required
+                            autoComplete="off"
+                            name="email"
+                            className="rounded-lmd block w-full border-b-3 border-black pb-3"
+                            type="email"
+                            placeholder="Email address"
+                        />
+
+                        <button className="mt-10 rounded-full bg-black px-20 py-3.25 text-white">
+                            Submit
+                        </button>
+                    </form>
                 </div>
             </section>
         </>
