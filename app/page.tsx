@@ -40,7 +40,7 @@ export default function Home() {
                 <div className="container mx-auto px-5 py-17.5">
                     <h2 className="text-4xl font-semibold">Popular products</h2>
 
-                    <div className="flex justify-center gap-5">
+                    <div className="flex justify-center gap-5 2xl:justify-between">
                         <article className="mt-10 flex justify-center">
                             <Link href="/product/gerhild">
                                 <Image
@@ -48,12 +48,12 @@ export default function Home() {
                                     alt="Gerhild beige plaid 130x170 cm"
                                     width={1090}
                                     height={1049}
-                                    className="bg-beige h-80 w-80 rounded-3xl p-10 sm:h-52.5 sm:w-52.5 sm:p-7"
+                                    className="bg-beige h-80 w-80 rounded-3xl p-10 sm:h-52.5 sm:w-52.5 sm:p-7 md:w-88.5 md:h-88.5 md:p-12.5 lg:w-76.75 lg:h-76.75 xl:w-96.5 xl:h-96.5"
                                 />
 
-                                <h3 className="mt-2.5 text-xl font-medium">Gerhild</h3>
+                                <h3 className="mt-2.5 text-xl md:text-2xl font-medium">Gerhild</h3>
 
-                                <div className="flex justify-between">
+                                <div className="flex justify-between md:text-xl">
                                     <p>130x170 cm</p>
 
                                     <p>€90</p>
@@ -64,23 +64,61 @@ export default function Home() {
                         <article className="mt-10 hidden justify-center sm:flex">
                             <Link href="/product/gerhild">
                                 <Image
-                                    src="/pop-plaid-gray.png"
+                                    src="/pop-plaid-grey.png"
                                     alt="Gultall gray plaid 130x170 cm"
                                     width={1090}
                                     height={1049}
-                                    className="bg-beige h-52.5 w-52.5 rounded-3xl p-7"
+                                    className="bg-beige h-52.5 w-52.5 rounded-3xl p-7 md:w-88.5 md:h-88.5 md:p-12.5 lg:w-76.75 lg:h-76.75 xl:w-96.5 xl:h-96.5"
                                 />
 
-                                <h3 className="mt-2.5 text-xl font-medium">Gultall</h3>
+                                <h3 className="mt-2.5 text-xl md:text-2xl font-medium">Gultall</h3>
 
-                                <div className="flex justify-between">
+                                <div className="flex justify-between md:text-xl">
                                     <p>130x170 cm</p>
 
                                     <p>€180</p>
                                 </div>
                             </Link>
                         </article>
+
+                        <article className="mt-10 hidden justify-center lg:flex">
+                            <Link href="/product/gerhild">
+                                <Image
+                                    src="/pop-plaid-brown.png"
+                                    alt="Rovaror brown plaid 150x200 cm"
+                                    width={1008}
+                                    height={965}
+                                    className="bg-beige h-52.5 w-52.5 rounded-3xl p-7 md:w-88.5 md:h-88.5 md:p-12.5 lg:w-76.75 lg:h-76.75 xl:w-96.5 xl:h-96.5"
+                                />
+
+                                <h3 className="mt-2.5 text-xl md:text-2xl font-medium">Rovaror</h3>
+
+                                <div className="flex justify-between md:text-xl">
+                                    <p>150x200 cm</p>
+
+                                    <p>€85</p>
+                                </div>
+                            </Link>
+                        </article>
                     </div>
+                </div>
+            </section>
+
+            <section className='bg-black pt-17.5 pb-22.5 px-5'>
+                <div className='container mx-auto text-white'>
+                    <h2 className='text-4xl/12 font-semibold'>Create comfort <br /> in home</h2>
+
+                    <p className='mt-5'>A blanket is a simple and versatile thing that can make relaxing after a hard day's work much more comfortable.</p>
+
+                    <Image alt="Sideneert brown blanket" src='/sideneert.png' width={977} height={922} className='mt-10' />
+
+                    <h3 className='text-3xl font-semibold mt-10'>Sedineert</h3>
+
+                    <p className='mt-5'>It is made from soft New Zealand wool, which is naturally stain-repellent.</p>
+
+                    <p className='mt-4'>This bedspread is an easy way to freshen up your bedroom decor. Plus, it can be used as an extra blanket if you get cold.</p>
+
+                    <Link href="/shop" className='pt-[18px] px-[90px] bg-white'>Go to shop</Link>
                 </div>
             </section>
         </>
