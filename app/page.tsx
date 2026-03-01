@@ -268,27 +268,29 @@ export default function Home() {
             </section>
 
             <section className="bg-beige">
-                <div className="container mx-auto px-5 pt-17.5 pb-22.5">
-                    <h2 className="text-3xl/11 font-semibold">
-                        Get 20% off <br /> your first purchase
-                    </h2>
+                <div className="container mx-auto px-5 pt-17.5 pb-22.5 sm:px-0 md:pt-22.5 md:pb-30 lg:flex lg:justify-between">
+                    <div className="lg:max-w-117.5">
+                        <h2 className="text-3xl/11 font-semibold sm:text-4xl/12 md:text-5xl/16">
+                            Get 20% off <br className="md:hidden" /> your first purchase
+                        </h2>
 
-                    <p className="mt-5">
-                        Subscribe to our newsletter and get a promo code for a 20% discount! You
-                        will receive only the most important and relevant news.
-                    </p>
+                        <p className="mt-5 sm:max-w-125 md:mt-7.5 md:max-w-182 md:text-xl">
+                            Subscribe to our newsletter and get a promo code for a 20% discount! You
+                            will receive only the most important and relevant news.
+                        </p>
+                    </div>
 
-                    <form action="" className="mt-10">
+                    <form action="" className="mt-10 md:mt-12.5 md:text-xl">
                         <input
                             required
                             autoComplete="off"
                             name="email"
-                            className="rounded-lmd block w-full border-b-3 border-black pb-3"
+                            className="rounded-lmd block w-full border-b-3 border-black pb-3 sm:max-w-80"
                             type="email"
                             placeholder="Email address"
                         />
 
-                        <button className="mt-10 rounded-full bg-black px-20 py-3.25 text-white">
+                        <button className="mt-10 rounded-full bg-black px-20 py-3.25 text-white md:mt-11.25">
                             Submit
                         </button>
                     </form>
