@@ -21,7 +21,7 @@ export default function Home() {
         <>
             <section className="bg-beige relative">
                 <div className="md:flex">
-                    <div className="container mx-auto px-5 pt-17 pb-22 sm:px-0 md:pt-22 md:pb-30 xl:pt-45.25 xl:pb-52.75">
+                    <div className="container mx-auto px-5 pt-17 pb-22 md:pt-22 md:pb-30 xl:pt-45.25 xl:pb-52.75">
                         <h1 className="text-left text-4xl/12 font-semibold sm:text-5xl/15 md:text-6xl/19">
                             Soft plaids <br /> for your comfort
                         </h1>
@@ -52,7 +52,7 @@ export default function Home() {
             </section>
 
             <section>
-                <div className="container mx-auto px-5 py-17.5 sm:px-0">
+                <div className="container mx-auto px-5 py-17.5">
                     <h2 className="text-4xl font-semibold">Popular products</h2>
 
                     <div className="flex justify-center gap-5">
@@ -140,7 +140,7 @@ export default function Home() {
             </section>
 
             <section className="bg-black">
-                <div className="container mx-auto px-5 pt-17.5 pb-22.5 text-white sm:px-0 md:pt-22.5 md:pb-30 lg:pb-16.5 xl:py-37.5">
+                <div className="container mx-auto px-5 pt-17.5 pb-22.5 text-white md:pt-22.5 md:pb-30 lg:pb-16.5 xl:py-37.5">
                     <div className="xl:flex xl:items-center xl:gap-7.75 2xl:justify-between">
                         <div className="xl:w-87.5">
                             <h2 className="text-4xl/12 font-semibold md:text-5xl/15 md:font-medium">
@@ -191,7 +191,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="bg-beige relative px-5 pt-17.5 pb-22.5 sm:px-0 md:pt-25 md:pb-30 xl:pt-32.5 xl:pb-37.5">
+            <section className="bg-beige relative px-5 pt-17.5 pb-22.5 md:pt-25 md:pb-30 xl:pt-32.5 xl:pb-37.5">
                 <div className="container mx-auto text-center">
                     <div className="absolute -top-12 left-1/2 flex h-25 w-25 -translate-x-1/2 items-center justify-center rounded-full border-3 border-black bg-white md:-top-19 md:h-37.5 md:w-37.5 md:border-4">
                         <Image
@@ -216,7 +216,7 @@ export default function Home() {
             </section>
 
             <section className="bg-white">
-                <div className="container mx-auto px-5 pt-17.5 pb-22.5 sm:px-0 md:pt-22.5 md:pb-27.5 lg:pb-25 xl:pt-32.5 xl:pb-37.5">
+                <div className="container mx-auto px-5 pt-17.5 pb-22.5 md:pt-22.5 md:pb-27.5 lg:pb-25 xl:pt-32.5 xl:pb-37.5">
                     <h2 className="text-4xl/12 font-semibold md:text-5xl">
                         Follow us on <br className="sm:hidden" /> Instagram
                     </h2>
@@ -268,29 +268,32 @@ export default function Home() {
             </section>
 
             <section className="bg-beige">
-                <div className="container mx-auto px-5 pt-17.5 pb-22.5 sm:px-0 md:pt-22.5 md:pb-30 lg:flex lg:justify-between">
-                    <div className="lg:max-w-117.5">
-                        <h2 className="text-3xl/11 font-semibold sm:text-4xl/12 md:text-5xl/16">
-                            Get 20% off <br className="md:hidden" /> your first purchase
+                <div className="container mx-auto px-5 pt-17.5 pb-22.5 
+                                md:pt-22.5 md:pb-30 
+                                lg:flex lg:gap-12.5 xl:gap-15">
+                    
+                    <div className="lg:w-1/2">
+                        <h2 className="text-3xl/11 font-semibold sm:text-4xl/12 lg:text-5xl/16">
+                            Get 20% off <br className="md:hidden lg:block xl:hidden" /> your first purchase
                         </h2>
 
-                        <p className="mt-5 sm:max-w-125 md:mt-7.5 md:max-w-182 md:text-xl">
-                            Subscribe to our newsletter and get a promo code for a 20% discount! You
-                            will receive only the most important and relevant news.
+                        <p className="mt-5 md:mt-7.5 md:text-xl">
+                            Subscribe to our newsletter and get a promo code for a 20% discount!
+                            You will receive only the most important and relevant news.
                         </p>
                     </div>
 
-                    <form action="" className="mt-10 md:mt-12.5 md:text-xl">
+                    <form action="" className="mt-10 md:mt-12.5 md:text-xl lg:w-1/2 xl:w-1/3">
                         <input
                             required
                             autoComplete="off"
                             name="email"
-                            className="rounded-lmd block w-full border-b-3 border-black pb-3 sm:max-w-80"
+                            className="block w-full border-b-3 border-black pb-3"
                             type="email"
                             placeholder="Email address"
                         />
 
-                        <button className="mt-10 rounded-full bg-black px-20 py-3.25 text-white md:mt-11.25">
+                        <button className="mt-10 rounded-full bg-black px-20 py-3.25 text-white">
                             Submit
                         </button>
                     </form>
