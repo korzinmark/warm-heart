@@ -16,7 +16,7 @@ const Description = ({ className }: { className?: string }) => (
     <p className={className}>{DESCRIPTION_TEXT}</p>
 )
 
-export default function Home() {
+export default function Page() {
     return (
         <>
             <section className="bg-beige relative">
@@ -268,18 +268,16 @@ export default function Home() {
             </section>
 
             <section className="bg-beige">
-                <div className="container mx-auto px-5 pt-17.5 pb-22.5 
-                                md:pt-22.5 md:pb-30 
-                                lg:flex lg:gap-12.5 xl:gap-15">
-                    
+                <div className="container mx-auto px-5 pt-17.5 pb-22.5 md:pt-22.5 md:pb-30 lg:flex lg:gap-12.5 xl:gap-15">
                     <div className="lg:w-1/2">
                         <h2 className="text-3xl/11 font-semibold sm:text-4xl/12 lg:text-5xl/16">
-                            Get 20% off <br className="md:hidden lg:block xl:hidden" /> your first purchase
+                            Get 20% off <br className="md:hidden lg:block xl:hidden" /> your first
+                            purchase
                         </h2>
 
                         <p className="mt-5 md:mt-7.5 md:text-xl">
-                            Subscribe to our newsletter and get a promo code for a 20% discount!
-                            You will receive only the most important and relevant news.
+                            Subscribe to our newsletter and get a promo code for a 20% discount! You
+                            will receive only the most important and relevant news.
                         </p>
                     </div>
 
